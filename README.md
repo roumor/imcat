@@ -3,8 +3,6 @@
 Preview any size image in a terminal window.
 
 
-![imcat tiger](images/imcat_tiger.png "imcat tiger")
-
 # Platform
 
 Supports Linux, MacOS and Microsoft Windows 10 terminals.
