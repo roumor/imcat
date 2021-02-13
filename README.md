@@ -62,7 +62,3 @@ On Windows, you need clang.exe from Visual Studio 2017 to build the imcat.exe bi
 
 A shout out to [Frogtoss](http://github.com/mlabbe) for the idea and help. Thanks!
 
-## Gallery
-
-![Sample use](images/sampledesktop.png "Sample use.")
-
