@@ -239,19 +239,31 @@ int main( int argc, char* argv[] )
 
 	// Step 0: Windows cmd.exe needs to be put in proper console mode.
 	set_console_mode();
+  int width = 0;
+  int height = 0;
 
-  if (argc == 4 ){
-    int width = atoi(argv[2]);
-    int heigth = atoi(argv[3]);
-    if(width > 0 && heigth >0){
-      termw = width;
-      termh = heigth;
-    }
+  switch(argc)
+  {  //in case no width and height supplied use whole terminal
+    case 2:
+   	  get_terminal_size();
+      break;
+
+    case 4:
+      width = atoi(argv[2]);
+      height = atoi(argv[3]);
+      if(width > 0 && height >0){
+        //these are both static variables
+        termw = width;
+        termh = height;
+      }
+      break;
+      
+    default:
+      return 0;
   }
-  else{
+
+
 	// Step 1: figure out the width and height of terminal.
-   	get_terminal_size();
-  }
 	//fprintf( stderr, "Your terminal is size %dx%d\n", termw, termh );
 
 	// Step 2: Process all images on the command line.
