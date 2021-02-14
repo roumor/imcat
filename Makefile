@@ -4,6 +4,9 @@ rangercat: rangercat.c
 run: rangercat
 	./rangercat ./samples/1.png
 
-clean:
-	rm -f ./rangercat
+install: rangercat
+	mv rangercat /usr/local/bin/
+	echo 'Done. Usage: rangercat imagefile [Width Height]'
 
+clean: rangercat
+	rm -f rangercat
